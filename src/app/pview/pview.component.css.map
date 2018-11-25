@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEE,AAAA,MAAM,CAAA;EACJ,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,OAAe;EACjC,UAAU,EAAE,cAAc;EAC1B,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,MAAM;EAChB,WAAW,EAAE,GAAG;CACjB",
+    "sources": [
+        "pview.component.scss"
+    ],
+    "names": [],
+    "file": "pview.component.css"
+}

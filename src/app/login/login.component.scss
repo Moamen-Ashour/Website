@@ -1,0 +1,97 @@
+@mixin form{
+  .label{
+   border: 2px solid #fff;
+   border-radius: 15px;
+   width: 55%;
+         
+   .input{
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    width: 80%;
+    background-color: transparent; 
+    border-color: transparent;
+    }
+  
+   .em{
+      margin-right: 35px;
+      font-size: 15px;
+      margin-top: 15px;
+      }
+  }
+    .span{
+      color: #FF0000;
+      font-weight: bold;
+    }
+}
+
+ .form-group {
+      @include form;
+  }
+
+    .container {  
+      padding: 80px 15px;
+      background-color: #074910;
+      background-size: cover;
+      border-radius: 30px;
+
+       p{
+         color: #fff;
+         font-size: 50px;
+         margin-bottom: 10px;
+         font-weight: bold;
+       }
+      }
+    
+
+    .login{
+      width: 20%;
+      border-radius: 20px;
+      border: 2px solid #fff;
+      background: transparent;
+      font-size: 25px;
+      color: #fff;
+      margin-right: 10px;
+      cursor: pointer;
+
+      &:hover{
+        border-color: #fff0FF;
+        color: #fff0FF;
+      }
+    }
+
+   .reset-btn{
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 5px 20px;
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+       
+      &:hover{
+      border-color: #FF0000;
+      color: #FF0000;
+      }
+    }
+
+@media (min-width: 360px) {
+  .login{
+    width: 30%;
+    font-size: 20px;
+    height: 40px;
+
+    &:hover{
+      color: #0000ff;
+      border-color: #0000ff;
+    }
+  }
+  .input{
+    right: 25px;
+
+    &::placeholder{
+      font-size: 15px;
+      margin-right: 20px; 
+    }
+  }  
+ }

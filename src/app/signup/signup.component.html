@@ -1,0 +1,47 @@
+<!-- Sign Up Page-->
+<!-- Start Box-Center -->
+<div class="box-center">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="font"> 
+   <h1 class="signup">Sign Up</h1>
+    <div class="user-data">
+      <!-- First Name Filed-->
+      <!-- First Name lable --><label for="username">First Name</label>
+      <!-- First Name input --><input type="text" class="form-control" ngModel name="username" required #username="ngModel" placeholder="Write First Name">
+      <!-- Help Alert -->     <span class="help-block" *ngIf="!username.valid && username.touched">Please enter your username</span>
+      
+      <!-- Last Name Filed-->
+      <!-- Last Name lable --><label for="lastname">Last Name</label>
+      <!-- Last Name input --><input type="text" class="form-control" ngModel name="lastname" required #lastname="ngModel" placeholder="Write Last Name">
+      <!-- Help Alert -->     <span class="help-block" *ngIf="!lastname.valid && lastname.touched">Please enter your lastname</span>
+      
+      <!-- Phone Filed-->
+      <!-- Phone lable --> <label for="Phone">Phone</label>
+      <!-- Phone input --> <input type="number" class="form-control"  ngModel name="phone" required #phone="ngModel" placeholder="Write Phone Number">
+      <!-- Help Alert -->  <span class="help-block" *ngIf="!phone.valid && phone.touched">Please enter your phone</span>
+      
+      <!-- Email Filed-->
+      
+      <!-- Email lable -->  <label for="email">Email</label>
+      <!-- Email input -->  <input type="email" class="form-control" ngModel name="email" required email #email="ngModel" placeholder="Write Email Address">
+      <!-- Help Alert -->   <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a email</span>
+      
+      <!-- Country Filed-->
+      <!-- Country lable --> <label for="country">Country</label>
+      <!-- Country input --> <input type="text" class="form-control" id="country" placeholder="Write Country">
+      
+      <!-- City Filed-->
+      <!-- City lable -->  <label for="city">City</label>
+      <!-- City input -->  <input type="text" class="form-control" id="city" placeholder="Write City">
+      
+      <!-- Address Filed-->
+      <!-- Address lable --> <label for="address">Address</label>
+      <!-- Address input --> <input type="text" class="form-control" ngModel name="address" required #address="ngModel" placeholder="Write Current Address">
+      <!-- Help Alert -->    <span class="help-block" *ngIf="!address.valid && address.touched">Please write your address</span>
+      
+      <!-- Submit Button -->
+      <!-- This button will send all data to local storage -->
+      <button class="btn" type="sumbit" [disabled]="!f.valid">Submit</button>
+      
+    </div> <!-- End User-Data -->
+  </form><!-- End Form -->
+</div><!-- End Box-Cneter -->
