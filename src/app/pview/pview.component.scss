@@ -3,8 +3,17 @@
   .slide{
     border: 2px solid rgb(31, 31, 31);
     text-align: -webkit-center;
-    height: 350px;
+    height: 380px;
     overflow: hidden;
     margin-left: 5px;
   }
 
+
+
+  @media only screen and ( max-width: 460px){
+
+    .slide{
+      height: 420px;
+      overflow: hidden;
+    }
+  }

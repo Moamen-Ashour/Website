@@ -1,6 +1,7 @@
+
 <!-- Landing Page -->
 <!-- Navbar Container -->
-    <div class="container">
+<div class="container">
         <div class="row ">
             <div class="col-xs-12 col-sm-12 col-md-12">
               <ul class="nav nav-tabs">
@@ -11,11 +12,15 @@
         </div>
         </div>
     </div>
-    <!--  Display Container -->
         <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <router-outlet></router-outlet>
+                        
+    <button (click)="switchLanguage('en')" (click)="ChangeLtr()">en</button>
+
+    <button (click)="switchLanguage('ar')" (click)="ChangeRtl()">ar</button>
           </div>  
        </div>
     </div>
+

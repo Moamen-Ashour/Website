@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-signup',
@@ -9,8 +11,15 @@ import { NgForm } from '@angular/forms';
 export class SignupComponent implements OnInit {
 
 
-  constructor() { }
 
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    }
+
+   switchLanguage(language: string) {
+    this.translate.use(language);
+
+}
   ngOnInit() {
   
   }

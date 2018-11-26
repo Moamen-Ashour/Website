@@ -1,0 +1,27 @@
+
+{
+    "Login": "تسجيل الدخول",
+    "Write Email": "البريد الالكتروني",
+    "Write Password": "كلمة السر",
+    "Please enter your email": " يرجى ادخال البريد الالكتروني ",
+    "Please enter your password": " يرجى ادخال كلمة السر ",
+    "Reset": "مسح",
+    "Submit": "ارسال",
+    "Address": "العنوان",
+    "City": "المدينة",
+    "Country": "البلد",
+    "Phone": "المحمول",
+    "Last Name": "اسم العائلة",
+    "First Name": "اسم المستخدم",
+    "ُEmail":"البريد الالكتروني",
+    "Sign Up":"التسجيل",
+    "Please enter your phone": " يرجى ادخال رقم الهاتف ",
+    "Please enter your lastname": " يرجى ادخال اسم العائلة ",
+    "Please enter your username": " يرجى ادخال اسم المستخدم ",
+    "username":"اسم المستخدم",
+    "lastname":"اسم العائلة",
+    "phone":"رقم الهاتف",
+    "country":"البلد",
+    "city":"المدينة",
+    "address":"العنوان"
+}

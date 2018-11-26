@@ -18,14 +18,13 @@
 
     &:hover{
         background-color: #fff;
-        color: #fff;
+        color: #074910;
         font-weight: bold;
         font-size: 20px;
        }
     }
 }
 
-    
 .user-data{
    @include button();
 }            

@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './signup/signup.component';
 import { PViewService } from './p-view.service';
@@ -12,6 +11,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { PViewComponent } from './pview/pview.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ItemComponent } from './item/item.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 const appRoutes: Routes=[
@@ -19,6 +21,11 @@ const appRoutes: Routes=[
   { path:'signup', component: SignupComponent},
   { path:'pview', component: PViewComponent},
 ];
+
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 
 @NgModule({
@@ -36,7 +43,15 @@ const appRoutes: Routes=[
     HttpModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    SlickCarouselModule
+    SlickCarouselModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [PViewService],
   bootstrap: [AppComponent]

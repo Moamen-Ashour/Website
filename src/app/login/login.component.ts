@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
+
 
 
 @Component({
@@ -10,8 +12,16 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   @ViewChild('f') resetForm : NgForm;
+ 
 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    }
+
+   switchLanguage(language: string) {
+    this.translate.use(language);
+
+}
 
   ngOnInit() {
   }
@@ -36,4 +46,3 @@ export class LoginComponent implements OnInit {
   }
 
 }
-

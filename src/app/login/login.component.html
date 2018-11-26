@@ -1,8 +1,8 @@
 <!-- Login Container -->
-<div class="container font">
+<div class="container font" >
  <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-8 ">
-    <p>Login</p>
+    <p translate>Login</p>
   <!-- Strat Form -->      
   <form (ngSubmit)="onCheck(f)" #f="ngForm" id="form">       
   <div id="user-data">
@@ -12,10 +12,10 @@
  <!-- Email lable & icon -->   
  <label for="Email" class="label col-xs-3 col-xs-offset-3 col-md-4 col-md-offset-5 "><i class="em em-email col-md-2"></i>
     <!-- Email input -->      
-   <input type="email" class="input col-md-10" ngModel name="Email" required #Email="ngModel" placeholder="Write Email">
+   <input type="email" class="input col-md-10" ngModel name="Email" required #Email="ngModel" translate placeholder="{{ 'Write Email' | translate }}">
   </label>
   <!-- Pop-up Alert -->       
-   <span class="alert" class="span col-md-5 col-md-offset-5" *ngIf="!Email.valid && Email.touched">Please enter your email <i class="em em-thinking_face"></i></span>
+   <span class="alert" class="span col-md-5 col-md-offset-5" *ngIf="!Email.valid && Email.touched" translate>Please enter your email<i class="em em-thinking_face"></i></span>
   </div>
 </div>
   <!-- Password Section-->
@@ -24,16 +24,16 @@
     <!-- Password lable & icon --> 
    <label for="Password" class="label col-xs-3 col-xs-offset-3 col-md-5 col-md-offset-5"><i class="em em-lock col-md-2"></i>
     <!-- Password input -->      
-   <input type="password" class="input col-md-10" ngModel name="Phone" required #Phone="ngModel" placeholder="Write Password">
+   <input type="password" class="input col-md-10" ngModel name="Phone" required #Phone="ngModel" translate placeholder="{{ 'Write Password' | translate }}">
   </label>
     <!-- Password Alert -->    
-    <span class="alert" class="span col-md-5 col-md-offset-5" *ngIf="!Phone.valid && Phone.touched">Please enter your phone number <i class="em em-thinking_face"></i></span>
+    <span class="alert" class="span col-md-5 col-md-offset-5" *ngIf="!Phone.valid && Phone.touched" translate>Please enter your password<i class="em em-thinking_face"></i></span>
   </div>
   </div>
   <!-- Login & Reset Buttons-->
 <div class="row">
-  <button class="login col-xs-offset-3 col-md-7 col-md-offset-5" type="submit" >Login</button>
-  <button class="reset-btn" data-toggle="tooltip" data-placement="top" type="reset" [disabled]="!f.valid" data-html="true" title="This button will reset all fields" onclick="onReset()">Reset</button>
+  <button class="login col-xs-offset-3 col-md-7 col-md-offset-5" type="submit"translate>Login</button>
+  <button class="reset-btn" data-toggle="tooltip" data-placement="top" type="reset" [disabled]="!f.valid" data-html="true" title="This button will reset all fields" onclick="onReset()" translate>Reset</button>
 </div>
 </div>
 </form> <!-- End Form -->
