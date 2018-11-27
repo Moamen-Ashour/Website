@@ -10,3 +10,12 @@ body{
   .rtl{
     direction: rtl;
   }
+
+  .floatPR{
+    float:right;
+  }
+
+  .floatBR{
+    float: right;
+    margin-left: 11px;
+  }

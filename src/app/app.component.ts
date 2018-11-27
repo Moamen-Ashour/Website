@@ -19,13 +19,35 @@ export class AppComponent implements OnInit {
    }
 
     ngOnInit(){} 
-      ChangeRtl(){
+      ChangeRtl(): void {
       const body = document.getElementsByTagName('html')[0];
       body.classList.add('rtl');
+    }
+  
+    
+    ChangeRtlP(): void {
+      const body = document.getElementsByTagName('p')[0];
+      body.classList.add('floatPR');
+    }
+       
+    ChangeRtlB(): void {
+      const body = document.getElementsByTagName('button')[0];
+      body.classList.add('floatBR');
     }
   
      ChangeLtr(): void {
       const body = document.getElementsByTagName('html')[0];
       body.classList.remove('rtl');
+    }
+
+    
+    ChangeLtlP(): void {
+      const body = document.getElementsByTagName('p')[0];
+      body.classList.remove('floatPR');
+    }
+       
+    ChangeLtlB(): void {
+      const body = document.getElementsByTagName('button')[0];
+      body.classList.remove('floatBR');
     }
    }
