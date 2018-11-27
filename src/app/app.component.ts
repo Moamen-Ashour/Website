@@ -21,33 +21,24 @@ export class AppComponent implements OnInit {
     ngOnInit(){} 
       ChangeRtl(): void {
       const body = document.getElementsByTagName('html')[0];
+      const paragraph = document.getElementsByTagName('p')[0];
+      const button = document.getElementsByTagName('button')[0];
+
       body.classList.add('rtl');
+      paragraph.classList.add('floatPR');
+      button.classList.add('floatBR');
     }
   
     
-    ChangeRtlP(): void {
-      const body = document.getElementsByTagName('p')[0];
-      body.classList.add('floatPR');
-    }
-       
-    ChangeRtlB(): void {
-      const body = document.getElementsByTagName('button')[0];
-      body.classList.add('floatBR');
-    }
   
      ChangeLtr(): void {
       const body = document.getElementsByTagName('html')[0];
+      const paragraph = document.getElementsByTagName('p')[0];
+      const button = document.getElementsByTagName('button')[0];
+      
       body.classList.remove('rtl');
+      paragraph.classList.remove('floatPR');
+      button.classList.remove('floatBR');
     }
 
-    
-    ChangeLtlP(): void {
-      const body = document.getElementsByTagName('p')[0];
-      body.classList.remove('floatPR');
-    }
-       
-    ChangeLtlB(): void {
-      const body = document.getElementsByTagName('button')[0];
-      body.classList.remove('floatBR');
-    }
    }
